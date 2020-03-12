@@ -1,15 +1,11 @@
-.gridBox {
-height: 50px;
-width: 50px;
-outline: black solid 1px;
-}
-
-div {
-    display: inline-block;
-    vertical-align: top;
+#gridContainer div {
+    outline: black solid 1px;
 }
 
 #gridContainer {
-    width: 1000px;
-    height: 1000px;
+    outline: red solid 5px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(5px,1fr);
+    grid-template-rows: 5px;
+    
 }

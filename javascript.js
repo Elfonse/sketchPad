@@ -19,9 +19,9 @@ By creating element within the loop, it creates a brand new div for appending to
 the container.
 */
 
-function createGrid() {
-    for (let i = 0; i < 16; i++) {
-        for (let j = 0; j < 16; j++ ) {
+function createGrid(num) {
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++ ) {
         let makeBox = document.createElement("div");
         makeBox.classList.add("gridBox");
         document.getElementById("gridContainer").appendChild(makeBox);
@@ -31,7 +31,7 @@ function createGrid() {
     }
 }
 
-createGrid();
+createGrid(16);
 
 
 /*document.getElementById("gridContainer").appendChild(makeBox);
