@@ -1,11 +1,21 @@
-#gridContainer div {
-    outline: black solid 1px;
+:root {
+    --colNum: 16;
+    --rowNum: 16;
 }
 
+.gridBox {
+    outline: black solid 1px;
+    height: auto;
+    width: auto;
+
+}
 #gridContainer {
-    outline: red solid 5px;
+    margin: auto;
+    height: 600px;
+    width: 600px;
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(5px,1fr);
-    grid-template-rows: 5px;
-    
+    grid-template-columns: repeat(var(--colNum), 1fr);
+    grid-template-rows: repeat(var(--rowNum), 1fr);
+    border: 2px solid red;
+    margin-top: 10px;
 }

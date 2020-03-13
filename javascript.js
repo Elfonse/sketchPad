@@ -3,7 +3,6 @@
 
 
 
-//document.getElementById("makeBox").style.width = "300px";
 
 const gridContainer = document.querySelector("#gridContainer");
 
@@ -21,19 +20,10 @@ the container.
 
 function createGrid(num) {
     for (let i = 0; i < num; i++) {
-        for (let j = 0; j < num; j++ ) {
-        let makeBox = document.createElement("div");
-        makeBox.classList.add("gridBox");
-        document.getElementById("gridContainer").appendChild(makeBox);
-        }
-        let lineBreak = document.createElement("br");
-        document.getElementById("gridContainer").appendChild(lineBreak);
+    let makeBox = document.createElement('div');
+    makeBox.className = 'gridBox';
+    gridContainer.appendChild(makeBox);  
     }
 }
 
-createGrid(16);
-
-
-/*document.getElementById("gridContainer").appendChild(makeBox);
-document.getElementById("gridContainer").appendChild(lineBreak);
-gridContainer.createElement(makeBoxClone); */
+createGrid(256);
