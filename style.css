@@ -1,14 +1,17 @@
 :root {
     --colNum: 16;
     --rowNum: 16;
+    --color: white;
 }
 
 .gridBox {
+    background-color: var(--color);
     outline: black solid 1px;
     height: auto;
     width: auto;
 
 }
+
 #gridContainer {
     margin: auto;
     height: 600px;
@@ -18,4 +21,8 @@
     grid-template-rows: repeat(var(--rowNum), 1fr);
     border: 2px solid red;
     margin-top: 10px;
+}
+
+.gridBoxBlack {
+    background-color: black;
 }

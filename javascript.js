@@ -18,6 +18,7 @@ By creating element within the loop, it creates a brand new div for appending to
 the container.
 */
 
+
 function createGrid(num) {
     for (let i = 0; i < num; i++) {
     let makeBox = document.createElement('div');
@@ -42,4 +43,10 @@ document.querySelector("#resize").addEventListener("click", function() {
     let newGrid = (resizeNum*resizeNum);
     console.log(newGrid);
     createGrid(newGrid);
+});
+
+document.getElementById("gridContainer").addEventListener('mouseover', function(e) {
+    if (e.target && e.target.nodeName == "DIV") {
+        e.target.classList.add("gridBoxBlack")
+    }
 });
