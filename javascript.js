@@ -27,3 +27,19 @@ function createGrid(num) {
 }
 
 createGrid(256);
+
+/* Dynamically changes grid size based on user input after button click.
+    CSS variables for the grid column and row amount is updated. The loop
+    that creates DIVS is then re-iterated based on the new input.
+*/
+let root = document.documentElement;
+let resizeNum;
+
+document.querySelector("#resize").addEventListener("click", function() {
+    resizeNum = prompt("how many rows and columns should the grid have?");
+    root.style.setProperty('--colNum', resizeNum);
+    root.style.setProperty('--rowNum', resizeNum);
+    let newGrid = (resizeNum*resizeNum);
+    console.log(newGrid);
+    createGrid(newGrid);
+});
