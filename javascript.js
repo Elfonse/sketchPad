@@ -1,15 +1,5 @@
 
-
-
-
-
-
 const gridContainer = document.querySelector("#gridContainer");
-
-
-
-
-
 
 /* The code that creates the divs with dom need to be looped with each iteration.
 If they are declared outside of the loop, and only the appendchild action is looped,
@@ -45,8 +35,17 @@ document.querySelector("#resize").addEventListener("click", function() {
     createGrid(newGrid);
 });
 
+// paints grid black
+
+function blackBrush() {
 document.getElementById("gridContainer").addEventListener('mouseover', function(e) {
-    if (e.target && e.target.nodeName == "DIV") {
+    if (e.target.nodeName == "DIV") {
         e.target.classList.add("gridBoxBlack")
     }
 });
+}
+
+blackBrush();
+
+//TODO: Add button that turns off brush
+// add button that changes brush colour
